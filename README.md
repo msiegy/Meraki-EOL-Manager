@@ -64,7 +64,7 @@ Your two output files will contain one table for each of the organizations you o
 5. **Upgrade Path:** Link to the End of Sales announcement with suggested replacement SKUs
 6. **Total Units:** Count of total units in use of the specified SKU in the organization. Units not bound to any networks are assumed to not be in use and are not included in this count. Additionally, the table is ordered in descending order by this metric.
 
-![image alt text](images/annoucement.png)
+![image alt text](images/upgrade.png)
 
 Sample page you navigate to when clicking the Upgrade Path links.
 

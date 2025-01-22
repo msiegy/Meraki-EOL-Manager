@@ -1,6 +1,4 @@
-[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/Francisco-1088/merakiLifecycleReport)
-
-# merakiLifecycleReport
+# Meraki EOL Manager
 Obtain a lifecycle report from all of your Cisco Meraki organizations, detailing how many of your devices have EoL announcements published.
 
 ![image alt text](images/lifecycle_report.png)

@@ -10,6 +10,22 @@ from PyQt5 import QtCore, QtWidgets, QtWebEngineWidgets
 api_key = config.api_key
 
 def fetch_eol_data():
+    """Fetch EOL data from Meraki's machine-readable CSV file"""
+    csv_url = 'https://documentation.meraki.com/@api/deki/files/30186/Meraki_EOS_Summary.csv?revision=2'
+    
+    try:
+        # Read CSV directly
+        eol_df = pd.read_csv(csv_url)
+        print(f"Successfully fetched {len(eol_df)} EOL records from CSV")
+        return eol_df
+    except Exception as e:
+        print(f"Error fetching EOL data from CSV: {e}")
+        # Fallback to original HTML parsing method if CSV fails
+        print("Falling back to HTML parsing method...")
+        return fetch_eol_data_html()
+
+def fetch_eol_data_html():
+    """Original HTML parsing method as fallback"""
     url = 'https://documentation.meraki.com/General_Administration/Other_Topics/Meraki_End-of-Life_(EOL)_Products_and_Dates'
     dfs = pd.read_html(url)
     requested_url = requests.get(url)
